@@ -1,24 +1,20 @@
 
-<p>Listando {{ despesas.length }} despesas.</p>
+  <p>Listando {{ tiposDespesa.length }} tipos de despesas.</p>
 
 <table>
   <thead>
-    <tr>
-      <th data-field="name">Tipo de despesa</th>
-      <th data-field="name">Nome</th>
-      <th data-field="name">Valor</th>
-      <th data-field="name">Editar</th>
-      <th data-field="name">Excluir</th>
-    </tr>
+  <tr>
+    <th data-field="name">Nome</th>
+    <th data-field="name">Editar</th>
+    <th data-field="name">Excluir</th>
+  </tr>
   </thead>
 
   <tbody>
-    <tr *ngFor="let despesa of despesas">
-      <td>{{ despesa.nome }}</td>
-      <td>{{ despesa.nome }}</td>
-      <td>{{ despesa.valor }}</td>
+    <tr *ngFor="let tipoDespesa of tiposDespesa">
+      <td>{{ tipoDespesa.nome }}</td>
       <td>
-        <a [routerLink]="['/despesas', despesa.id]">
+        <a [routerLink]="['/tipoDespesa', tipoDespesa.id]">
           <i class="material-icons">mode_edit</i>
         </a>
       </td>

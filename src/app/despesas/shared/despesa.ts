@@ -1,4 +1,3 @@
-import { TipoDespesa } from './tipo-despesa'; 
 
 export class Despesa {
     id: number;

@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { routing } from './app.routing';
 import { despesasRouting } from './despesas/despesas.routing';
 import { DespesasModule } from './despesas/despesas.module';
+import { TipoDespesaModule } from './tipo-despesa/tipo-despesa.module';
 
 @NgModule({ 
   declarations: [
@@ -25,6 +26,7 @@ import { DespesasModule } from './despesas/despesas.module';
     FormsModule,
     HttpModule,
     MaterializeModule,
+    TipoDespesaModule,
     DespesasModule,
     routing
   ],
