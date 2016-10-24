@@ -1,0 +1,37 @@
+
+  <p>Listando {{ despesas.length }} despesas.</p>
+
+<table>
+  <thead>
+  <tr>
+    <th data-field="name">Nome</th>
+    <th data-field="name">Valor</th>
+    <th data-field="name">Editar</th>
+    <th data-field="name">Excluir</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let despesa of despesas">
+      <td>{{ despesa.nome }}</td>
+      <td>{{ despesa.valor }}</td>
+      <td>
+        <a [routerLink]="['/despesas', despesa.id]">
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </td>
+      <td>
+        <a (click)="deleteDespesa(despesa)" href="">
+          <i class="material-icons">delete</i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--routerLink="/users/new"-->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <a class="btn-floating btn-large waves-effect waves-light green"
+     routerLink="/despesa/nova">
+    <i class="material-icons">add</i>
+  </a>
+</div>
